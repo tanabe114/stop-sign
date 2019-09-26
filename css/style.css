@@ -1,0 +1,154 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family:Arial, sans-serif;
+	-webkit-font-smoothing:antialiased;
+	background: linear-gradient(225deg, #c1e7f5, #d2faed);
+}
+
+#wrapper{
+	overflow: hidden;
+	display: flex;
+	width: 100%;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+
+.main_area {
+	display: flex;
+	width: 300px;
+	margin: 0 100px;
+	margin-top: calc(50vh - 200px);
+}
+
+#sign_area {
+	width: 300px;
+	margin: 0 auto;
+}
+
+#big_sign {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin: 0px;
+	z-index: -1;
+}
+
+#big_sign img {
+	max-width: 100%;
+}
+
+#big_sign::after {
+	content: '';
+  display: block;
+  background: gray;
+  height: 50vh;
+  width: 20px;
+	margin-left: 140px;
+	margin-top: -20px;
+}
+
+/* 説明文 */
+#balloon {
+	display: inline-block;
+	width: 300px;
+	height: 50px;
+	margin-bottom: 10px;
+}
+
+#balloon p {
+	color: #000;
+	font-size: 24px;
+	margin: 0;
+	line-height: 1.4em;
+	font-weight: normal;
+	text-align: center;
+}
+
+
+/* 標識一覧の道路 */
+.road {
+  display: flex;
+	width: calc(100% - 500px);
+	margin: 30px 0 0 30px;
+}
+
+ul.list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.list li{
+	padding:10px;
+	width:100px;
+	height:100px;
+	list-style-type:none;
+	display: block;
+	cursor: pointer;
+	transition: opacity 0.1s;
+}
+
+.list li:nth-child(6n-5) {
+	-webkit-animation:fuwafuwa 4s infinite linear alternate;
+	animation:fuwafuwa 4s infinite linear alternate;
+	animation-delay: -3s;
+}
+
+.list li:nth-child(6n-4) {
+	-webkit-animation:fuwafuwa 4s infinite linear alternate;
+	animation:fuwafuwa 4s infinite linear alternate;
+	animation-delay: -2.8s;
+}
+
+.list li:nth-child(6n-3) {
+	-webkit-animation:fuwafuwa 4s infinite linear alternate;
+	animation:fuwafuwa 4s infinite linear alternate;
+	animation-delay: -2.6s;
+}
+
+.list li:nth-child(6n-2) {
+	-webkit-animation:fuwafuwa 4s infinite linear alternate;
+	animation:fuwafuwa 4s infinite linear alternate;
+	animation-delay: -2.4s;
+}
+
+.list li:nth-child(6n-1) {
+	-webkit-animation:fuwafuwa 4s infinite linear alternate;
+	animation:fuwafuwa 4s infinite linear alternate;
+	animation-delay: -2.2s;
+}
+
+.list li:nth-child(6n) {
+	-webkit-animation:fuwafuwa 4s infinite linear alternate;
+	animation:fuwafuwa 4s infinite linear alternate;
+	animation-delay: -2s;
+}
+
+.list li img {
+	max-width: 100%;
+}
+
+.list li:hover {
+	opacity: 0.6;
+}
+
+@-webkit-keyframes fuwafuwa {
+0% {-webkit-transform:translate(0, 10px) scale(0.9);}
+50% {-webkit-transform:translate(0, -10px) scale(1.1);}
+100% {-webkit-transform:translate(0, 10px) scale(0.9);}
+}
+
+@keyframes fuwafuwa {
+0% {transform:translate(0, 10px) scale(0.9);}
+50% {transform:translate(0, -10px) scale(1.1);}
+100% {transform:translate(0, 10px) scale(0.9);}
+}
+
+/* アクティブ */
+.active, .active_mark, .opacity {
+	opacity: 0.6;
+}
